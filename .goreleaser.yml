@@ -37,8 +37,10 @@ checksum:
 snapshot:
   name_template: "{{ .Tag }}-next"
 changelog:
+  skip: true
   sort: asc
   filters:
     exclude:
       - '^docs:'
       - '^test:'
+      - typo
