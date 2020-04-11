@@ -3,9 +3,9 @@ name: Publish Docker image
 on:
   push:
     branches:
-      - *
+      - '*'
     tags:
-      - *
+      - '*'
 
 env:
   DOCKER_HUB_REPOSITORY: yteraoka/tcp-connect-go
