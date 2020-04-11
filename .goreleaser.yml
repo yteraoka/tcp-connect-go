@@ -5,6 +5,12 @@ before:
 builds:
   - main:
     binary: tcp-connect-go
+    goos:
+      - linux
+      - darwain
+      - windows
+    goarch:
+      - amd64
     ldflags:
       - -s -w
       - -X main.version={{.Version}}
