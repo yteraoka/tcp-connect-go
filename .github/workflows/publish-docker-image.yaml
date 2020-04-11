@@ -7,9 +7,6 @@ on:
     tags:
       - '*'
 
-env:
-  DOCKER_HUB_REPOSITORY: yteraoka/tcp-connect-go
-
 jobs:
   push_to_registory:
     name: Push Docker image to Docker Hub
@@ -22,5 +19,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
-          repository: ${DOCKER_HUB_REPOSITORY}
+          repository: yteraoka/tcp-connect-go
           tag_with_ref: true
