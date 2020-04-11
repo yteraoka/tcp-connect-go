@@ -1,0 +1,23 @@
+name: Publish Docker image
+
+on:
+  release:
+    types: [published]
+
+env:
+  DOCKER_HUB_REPOSITORY: yteraoka/tcp-connect-go
+
+jobs:
+  push_to_registory:
+    name: Push Docker image to Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Push to Docker Hub
+        uses: docker/build-push-actions@v1
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+          repository: ${DOCKER_HUB_REPOSITORY}
+          tag_with_ref: true
