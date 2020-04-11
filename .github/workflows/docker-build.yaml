@@ -1,0 +1,29 @@
+name: Build Docker Image
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+
+env:
+  DOCKER_HUB_BASE_NAME: yteraoka/tcp-connect-go
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: docker build
+      run: |
+        docker build . -t ${DOCKER_HUB_BASE_NAME}:latest
+    - name: docker login
+      env:
+        DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
+      run: |
+        echo "${DOCKER_HUB_TOKEN}" | docker login --username yteraoka --password-stdin
+    - name: push docker image
+      run: docker push ${DOCKER_HUB_BASE_NAME}:latest
