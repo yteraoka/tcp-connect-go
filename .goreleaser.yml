@@ -7,7 +7,7 @@ builds:
     binary: tcp-connect-go
     goos:
       - linux
-      - darwain
+      - darwin
       - windows
     goarch:
       - amd64
