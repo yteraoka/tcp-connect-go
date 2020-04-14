@@ -23,14 +23,14 @@ var verbose bool
 var useTls bool
 var tlsConfig = &tls.Config{}
 
-func times(f func(string, time.Duration), count int, remote string, timeout time.Duration, wg *sync.WaitGroup) {
+func times(id int, f func(int, int, string, time.Duration), count int, remote string, timeout time.Duration, wg *sync.WaitGroup) {
 	defer wg.Done()
 	for i := 0; i < count; i++ {
-		f(remote, timeout)
+		f(id, i, remote, timeout)
 	}
 }
 
-func connect(remote string, timeout time.Duration) {
+func connect(routine_id, counter int, remote string, timeout time.Duration) {
 	d := net.Dialer{Timeout: timeout}
 	start := time.Now()
 	var conn net.Conn
@@ -41,13 +41,13 @@ func connect(remote string, timeout time.Duration) {
 		conn, err = d.Dial("tcp4", remote)
 	}
 	if err != nil {
-		fmt.Printf("Can't connect to %s: %v\n", remote, err)
+		fmt.Printf("[%03d-%05d] Can't connect to %s: %v\n", routine_id, counter, remote, err)
 		return
 	}
 	end := time.Now()
 	diff := end.Sub(start).Milliseconds()
 	if verbose || diff > thresholdMs {
-		fmt.Printf("%d ms\n", diff)
+		fmt.Printf("[%03d-%05d] %d ms\n", routine_id, counter, diff)
 	}
 	defer conn.Close()
 }
@@ -89,7 +89,7 @@ func main() {
 	wg.Add(*parallel)
 
 	for i := 0; i < *parallel; i++ {
-		go times(connect, *count, remoteHostPort, time.Duration(*timeout)*time.Second, &wg)
+		go times(i, connect, *count, remoteHostPort, time.Duration(*timeout)*time.Second, &wg)
 	}
 
 	wg.Wait()
