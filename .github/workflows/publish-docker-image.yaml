@@ -78,7 +78,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: false
           tags: ${{ steps.meta.outputs.tags }}
-          cache-crom: type=gha
+          cache-from: type=gha
           cache-to: type=gha,mode=max
 
       - name: Build and push
@@ -92,7 +92,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          cache-crom: type=gha
+          cache-from: type=gha
           cache-to: type=gha,mode=max
 
       # Sign the resulting Docker image digest expect on PRs.
