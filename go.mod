@@ -1,6 +1,6 @@
 module github.com/yteraoka/tcp-connect-go
 
-go 1.19
+go 1.25
 
 require github.com/jessevdk/go-flags v1.6.1
 
