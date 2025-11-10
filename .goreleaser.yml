@@ -1,6 +1,11 @@
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+# vim: set ts=2 sw=2 tw=0 fo=cnqoj
+version: 2
+
 before:
   hooks:
     - go mod download
+
 builds:
   - goos:
       - linux
@@ -8,6 +13,7 @@ builds:
       - windows
     goarch:
       - amd64
+      - arm64
     ldflags:
       - -s -w
       - -X main.version={{.Version}}
@@ -15,20 +21,23 @@ builds:
       - -X main.date={{.Date}}
     env:
       - CGO_ENABLED=0
+
 archives:
-  - format: binary
-    replacements:
-      darwin: Darwin
-      linux: Linux
-      windows: Windows
-      386: i386
-      amd64: x86_64
+  - name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    formats:
+      - binary
     format_overrides:
       - goos: windows
-        format: zip
+        formats:
+          - zip
+
 checksum:
   name_template: checksums.txt
-snapshot:
-  name_template: "{{ .Tag }}-next"
+
 changelog:
-  skip: true
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - '^[mM]erge'
