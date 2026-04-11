@@ -3,5 +3,6 @@
   "assignees": ["yteraoka"],
   "extends": [
     "config:base"
-  ]
+  ],
+  "minimumReleaseAge": "7 days"
 }
