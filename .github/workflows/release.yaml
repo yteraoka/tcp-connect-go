@@ -32,14 +32,14 @@ jobs:
 
       - name: Run GoReleaser build check (Pull Request)
         if: github.event_name == 'pull_request'
-        uses: goreleaser/goreleaser-action@ec59f474b9834571250b370d4735c50f8e2d1e29 # v7.0.0
+        uses: goreleaser/goreleaser-action@1a80836c5c9d9e5755a25cb59ec6f45a3b5f41a8 # v7.2.1
         with:
           version: v2
           args: build --snapshot --clean
 
       - name: Run GoReleaser release (Tag Push)
         if: startsWith(github.ref, 'refs/tags/')
-        uses: goreleaser/goreleaser-action@ec59f474b9834571250b370d4735c50f8e2d1e29 # v7.0.0
+        uses: goreleaser/goreleaser-action@1a80836c5c9d9e5755a25cb59ec6f45a3b5f41a8 # v7.2.1
         with:
           version: v2
           args: release --clean
