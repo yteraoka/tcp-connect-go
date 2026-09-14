@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.5.1](https://github.com/yteraoka/tcp-connect-go/compare/v1.5.0...v1.5.1) - 2026-09-10
+
+- Update golang Docker tag to v1.27.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/96
+- Update docker/setup-qemu-action action to v4.3.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/98
+- Update dependency golang to v1.27.1 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/99
+- Update golang Docker tag to v1.27.1 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/100
+- Update Songmu/tagpr action to v1.20.3 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/101
+
 ## [v1.4.2](https://github.com/yteraoka/tcp-connect-go/compare/v1.4.1...v1.4.2) - 2026-08-31
 
 - Update sigstore/cosign-installer action to v4.1.2 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/67
