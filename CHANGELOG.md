@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.5.2](https://github.com/yteraoka/tcp-connect-go/compare/v1.5.1...v1.5.2) - 2026-09-23
+
+- Update docker/setup-buildx-action action to v4.4.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/103
+- Update docker/build-push-action action to v7.4.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/102
+- Update docker/setup-qemu-action action to v4.4.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/105
+- Update docker/setup-buildx-action action to v4.4.1 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/106
+
 ## [v1.5.1](https://github.com/yteraoka/tcp-connect-go/compare/v1.5.0...v1.5.1) - 2026-09-10
 
 - Update golang Docker tag to v1.27.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/96
