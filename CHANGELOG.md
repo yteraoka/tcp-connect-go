@@ -1,5 +1,23 @@
 # Changelog
 
+## [v1.5.2](https://github.com/yteraoka/tcp-connect-go/compare/v1.5.1...v1.5.2) - 2026-10-27
+
+- Update docker/setup-buildx-action action to v4.4.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/103
+- Update docker/build-push-action action to v7.4.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/102
+- Update docker/setup-qemu-action action to v4.4.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/105
+- Update docker/setup-buildx-action action to v4.4.1 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/106
+- Update Songmu/tagpr action to v1.20.4 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/107
+- Update Songmu/tagpr action to v1.21.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/108
+- Update Songmu/tagpr action to v1.21.1 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/109
+- Update Songmu/tagpr action to v1.21.2 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/110
+- Update dependency golang to v1.27.2 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/111
+- Update actions/create-github-app-token action to v3.3.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/112
+- Update goreleaser/goreleaser-action action to v7.3.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/113
+- Update golang Docker tag to v1.27.2 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/114
+- Update Songmu/tagpr action to v1.21.3 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/115
+- Update dependency golang to v1.27.3 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/116
+- Update dependency sigstore/cosign to v3.1.4 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/117
+
 ## [v1.5.1](https://github.com/yteraoka/tcp-connect-go/compare/v1.5.0...v1.5.1) - 2026-09-10
 
 - Update golang Docker tag to v1.27.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/96
