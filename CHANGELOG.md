@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.5.3](https://github.com/yteraoka/tcp-connect-go/compare/v1.5.2...v1.5.3) - 2026-10-30
+
+- Update Songmu/tagpr action to v1.21.4 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/118
+- Update docker/login-action action to v4.7.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/120
+
 ## [v1.5.2](https://github.com/yteraoka/tcp-connect-go/compare/v1.5.1...v1.5.2) - 2026-10-27
 
 - Update docker/setup-buildx-action action to v4.4.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/103
