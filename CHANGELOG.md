@@ -1,5 +1,18 @@
 # Changelog
 
+## [v1.5.3](https://github.com/yteraoka/tcp-connect-go/compare/v1.5.2...v1.5.3) - 2026-11-25
+
+- Update Songmu/tagpr action to v1.21.4 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/118
+- Update docker/login-action action to v4.7.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/120
+- Update golang Docker tag to v1.27.3 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/121
+- Update Songmu/tagpr action to v1.22.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/122
+- Update sigstore/cosign-installer action to v4.1.3 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/123
+- Update docker/login-action action to v4.8.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/124
+- Update dependency golang to v1.27.4 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/125
+- Update golang Docker tag to v1.27.4 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/126
+- Update actions/setup-go action to v7.1.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/127
+- Update actions/create-github-app-token action to v3.4.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/128
+
 ## [v1.5.2](https://github.com/yteraoka/tcp-connect-go/compare/v1.5.1...v1.5.2) - 2026-10-27
 
 - Update docker/setup-buildx-action action to v4.4.0 by @renovate[bot] in https://github.com/yteraoka/tcp-connect-go/pull/103
